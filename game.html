@@ -1,0 +1,45 @@
+<head> 
+    <title> .keycode online</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="a website moment">
+    <meta name="keywords" content="decodex, decode, decode-chan, cool css for krunker, cool programmers">
+    <meta name="author" content="DecodeX">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icon_0.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel=stylesheet href="css/game.css">
+    <link rel=stylesheet href="css/game_custom.css">
+    <script src="./script/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="bgImageHolder">
+        <img id="backgroundImage" src="./img/background.png">
+    </div> 
+
+    <div id="upperContainer"> 
+        <div id="scoreWrap">
+            <div class="scoreDisplay scoreItem"> 0 </div>
+            <div class="accContainer">
+                <div class="rankIcon scoreItem"> SS </div>
+                <div class="accDisplay"> 100% </div>
+            </div>
+        </div>
+
+        <div id="songWrap">
+            <div class="songDisplay"> 
+                <div class="songName scoreItem"> GHOST </div>
+                <div class="songArtist scoreItem"> Camellia </div>
+                <div class="songDuration"> 5:13</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comboDisplay scoreItem"> 0</div>
+
+    <canvas id="gameScreen" class="active"></canvas>
+</body>

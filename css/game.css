@@ -1,0 +1,165 @@
+:root {
+
+  --bar-clr: #3d3d3d;
+  --accent-clr: #ffffff;
+  --brightness-lvl: 0.6;
+
+  /* activity stuff */
+  --online-primary: #00ffb3;
+  --online-secondary: rgb(0, 255, 55);
+  --idle-primary: rgb(255, 183, 0);
+  --idle-secondary: rgb(255, 225, 0);
+  --offline-primary: rgb(68, 68, 68);
+  --offline-secondary: rgb(26, 26, 26);
+  --dnd-primary: rgb(255, 92, 92);
+  --dnd-secondary: rgb(209, 42, 42);
+  /* clan stuff */
+  --clan-lvl1: #fff;
+  --clan-lvl10: rgb(85, 255, 0);
+  --clan-lvl20: rgb(0, 110, 255);
+  --clan-lvl50: rgb(149, 0, 255);
+  --clan-lvl100: rgb(255, 153, 0);
+  --clan-top: rgb(255, 238, 0);
+  --clan-verified: rgb(0, 217, 255);
+  /* level stuff */
+  --lvl1: rgb(197, 197, 197);
+  --lvl20: rgb(0, 255, 136);
+  --lvl50: rgb(255, 60, 0);
+  --lvl100: rgb(255, 153, 0);
+  --lvl150: rgb(204, 222, 255);
+}
+
+@font-face {
+  font-family: gamefont;
+  src: url(fonts/font0.ttf);
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v128/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes blink {
+  0% {
+    color: rgb(255 255 255);
+  }
+  0% {
+    color: rgb(255 255 255 / 90%);
+  }
+  0% {
+    color: rgb(255 255 255 / 80%);
+  }
+  0% {
+    color: rgb(255 255 255 / 70%);
+  }
+  0% {
+    color: rgb(255 255 255 / 60%);
+  }
+  0% {
+    color: rgb(255 255 255 / 50%);
+  }
+  0% {
+    color: rgb(255 255 255 / 40%);
+  }
+  0% {
+    color: rgb(255 255 255 / 30%);
+  }
+  0% {
+    color: rgb(255 255 255 / 20%);
+  }
+  0% {
+    color: rgb(255 255 255 / 10%);
+  }
+  0% {
+    color: rgb(255 255 255 / 5%);
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+* {
+  font-family: 'gamefont';
+  color: #fff;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+#bgImageHolder {
+  position: fixed;
+  z-index: -1;
+  margin: -8px;
+  filter: brightness(var(--brightness-lvl));
+}
+
+#upperContainer {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  padding: 10px;
+  margin: -8px;
+}
+
+#scoreWrap {
+    text-align: right;
+}
+
+.scoreItem {
+  margin-top: 5px;
+}
+
+.scoreDisplay {
+  font-size: 32px;
+}
+
+.comboDisplay {
+  background: #000;
+  width: 75px;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+}
+
+.comboDisplay:after {
+  content: 'x';
+  text-transform: lowercase;
+}
+
+#songWrap {
+  position: absolute;
+  padding: 10px;
+  top: 2px;
+  left: 0;
+}
+
+.songName {
+  font-size: 32px;
+}
+
+#gameScreen {
+  width: 100vw;
+  height: 100vh;
+}
