@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PROJECTS </title>
+    <link href="/img/icon-ia.png" rel="icon">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/themes/default.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body onload="getIconVar()">
+
+    <div id="loader">
+        <div id="holder">
+            <img id="gd-icon">
+        </div>
+        <div class="refresh-icon material-icons" onclick="closeLoader()"> rotate_right </div>
+    </div>
+
+    <div id="tooltip"> Projects </div>
+
+    <nav id="navBar">
+        <a class="navItem" href="/index.html" onmouseover='toolText("Index")'>
+            <div class="navIcon material-icons"> home </div>
+        </a>
+        <a class="navItem active" href="#" onmouseover='toolText("Projects")'>
+            <div class="navIcon material-icons"> code </div>
+        </a>
+        <a class="navItem" href="/about.html" oonmouseover='toolText("About")'>
+            <div class="navIcon material-icons"> info </div>
+        </a>
+        <a class="navItem" onmouseover='toolText("App Library")'>
+            <div class="navIcon material-icons"> add </div>
+        </a>
+        <div class="navItem">
+            <div class="navIcon material-icons"> palette </div>
+        </div>
+    </nav>
+
+    <div class="projectList">
+        <img src="/img/projects/css_1.png" class="projectItem css-100" onclick="changeImage1()">
+        <img src="/img/projects/css_2.png" class="projectItem css-200" onclick="changeImage2()">
+        <img src="/img/projects/css_3.png" class="projectItem css-300" onclick="changeImage3()">
+        <img src="/img/projects/3601.png" class="projectItem unk-3601" onclick="changeImage0()">
+    </div>
+
+    <div class="project">
+        <img class="projectImg" src="/img/projects/3601.png">
+        <div class="projectDesc">
+            <div class="projectTitle"> Nothing being viewed. </div>
+            <div class="projectSub"> No status. </div>
+            <div class="projectLink">
+                <a href="#" class="downloadIcon link material-icons"> file_download_off </a>
+                <div class="license"> CC-BY-SA-ND 3.0, © Decipher 2022 </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/js/script.js">
+</script>
+<script>
+    var loader = document.getElementById("loader");
+    var refreshIcon = document.querySelector(".refresh-icon");
+    var notifs = 41;
+    var toolVal = document.getElementById("tooltip");
+    var css100 = document.querySelector(".css-100");
+    var css200 = document.querySelector(".css-200");
+    var css300 = document.querySelector(".css-300");
+    var unk3601 = document.querySelector(".unk-3601");
+    var projectImg = document.querySelector(".projectImg");
+    var projectTitle = document.querySelector(".projectTitle");
+    var projectSub = document.querySelector(".projectSub");
+    var downloadAvailable = document.querySelector(".downloadIcon");
+
+    function noLoader() {
+        loader.classList.add("display");
+    }
+
+    function closeLoader() {
+        loader.classList.add("active");
+        setTimeout(noLoader, 1200);
+        setFavicons('img/icon-p.png');
+        document.title = "ACTIVE";
+    }
+
+    function setFavicons(favImg) {
+        let headTitle = document.querySelector('head');
+        let setFavicon = document.createElement('link');
+        setFavicon.setAttribute('rel', 'shortcut icon');
+        setFavicon.setAttribute('href', favImg);
+        headTitle.appendChild(setFavicon);
+    }
+
+    function toolText(text) {
+        toolVal.innerHTML = text;
+    }
+
+    function changeImage1() {
+        projectImg.src = "/img/projects/css_1.png";
+        projectTitle.innerHTML = "ULTRAKILL";
+        projectSub.innerHTML = "idea from kiwi, by decode";
+        css100.classList.add("active");
+        css200.classList.remove("active");
+        css300.classList.remove("active");
+    }
+
+    function changeImage2() {
+        projectImg.src = "/img/projects/css_2.png";
+        projectTitle.innerHTML = "MTZ v2 Prototype";
+        projectSub.innerHTML = "A concept idea for MTZ v2 for Sakurasou, by decode";
+        css100.classList.remove("active");
+        css200.classList.add("active");
+        css300.classList.remove("active");
+    }
+
+    function changeImage3() {
+        projectImg.src = "/img/projects/css_3.png";
+        projectTitle.innerHTML = "DXClient Alpha Loved";
+        projectSub.innerHTML = "idea from gluzly, by decode";
+        css100.classList.remove("active");
+        css200.classList.remove("active");
+        css300.classList.add("active");
+    }
+
+    function changeImage0() {
+        projectImg.src = "/img/projects/3601.png";
+        projectTitle.innerHTML = "Unknown Source";
+        projectSub.innerHTML = "Please reinsert the disc.";
+        css100.classList.remove("active");
+        css200.classList.remove("active");
+        css300.classList.remove("active");
+    }
+</script>
+
+</html>

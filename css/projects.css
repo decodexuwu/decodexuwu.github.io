@@ -1,0 +1,66 @@
+.projectList {
+    position: absolute;
+    right: -10px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    width: 390px;
+    overflow: auto;
+}
+
+.projectItem {
+    margin-top: 8px;
+    width: 360px;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.project {
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    width: 700px;
+}
+
+.projectImg {
+    width: 1000px;
+}
+
+.projectDesc {
+    position: relative;
+    bottom: 120px;
+    padding: 8px;
+    padding-top: 10px;
+    background: #000000c9;
+    width: 984px;
+}
+
+.projectTitle {
+    font-size: 32px;
+}
+
+.projectLink {
+    display: flex;
+    margin-top: 8px;
+}
+
+.license {
+    color: #ffffff54;
+}
+
+.link.material-icons {
+    margin-right: 8px;
+}
+
+.projectSub {
+    margin: 8px 0;
+}
+
+.projectItem:hover {
+    border-right: 2px solid white;
+}
+
+.projectItem.active {
+    border: 2px solid white;
+}

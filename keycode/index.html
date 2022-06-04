@@ -1,0 +1,196 @@
+<head> 
+    <title> .keycode online</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="a website moment">
+    <meta name="keywords" content="decodex, decode, decode-chan, cool css for krunker, cool programmers">
+    <meta name="author" content="DecodeX">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icon_0.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel=stylesheet href="css/main.css">
+    <link rel=stylesheet href="css/main_custom.css">
+    <script src="./script/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <audio loop="true" autoplay="true"> 
+        <source id="bgMusic" src="/assets/sound/bg-bm.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="bgImageHolder">
+        <img id="backgroundImage" src="./img/background.png">
+    </div> 
+
+    <div id="gameTitle"> KEYCODE 
+        <div class="subTitle"> BETA v1 </div>
+    </div>
+
+    <div id="sideBar">
+        <div class="barItem itemS" onclick="toggleStartWindow()"> 
+            <span class="material-icons bIcon bIconS"> start </span> Start </div>
+        <div class="barItem itemO" onclick="toggleSettings()">
+            <span class="material-icons bIcon bIconO"> settings </span> Options </div>
+        <div class="barItem itemP" onclick="toggleProfWindow()"> 
+            <span class="material-icons bIcon bIconP"> person </span> Profile </div>
+        <div class="barItem itemA">
+            <span class="material-icons bIcon bIconA"> info </span> About </div>
+        <div class="barItem itemE">
+            <span class="material-icons bIcon bIconE"> logout </span> Exit </div>
+        <div id="profHold" onclick="toggleProfWindow()"> 
+            <div id="imgHold"> 
+                <img src="/img/userPictures/profile_1.png" class="userI" width="60px" height="60px">
+            </div>
+        </div>
+    </div>
+
+        <div id="strtWindow">
+        <div class="windowTitle strt"> Play
+            <div class="close id2 material-icons" onclick="toggleStartWindow()"> close </div>
+        </div>
+        <div class="windowBody strt"> 
+            <div class="section multiplayer"> 
+                <img class="sIcon multiplayer" src="/img/btl_icns/multiplayer.png" width="200px">
+                <div class="sectionTitle"> MULTIPLAYER </div> 
+            </div>
+            <div class="section story"> 
+                <img class="sIcon story" src="/img/btl_icns/story.png" width="200px">
+                <div class="sectionTitle"> STORY </div>  
+            </div>
+            <div class="section tutorial"> 
+                <img class="sIcon tutorial" src="/img/btl_icns/tutorial.png" width="200px">
+                <div class="sectionTitle"> TRAINING </div>  
+            </div>
+        </div>
+    </div>
+
+    <div id="profWindow">
+        <div class="windowTitle"> Profile 
+            <div class="close id2 material-icons" onclick="toggleProfWindow()"> close </div>
+        </div>
+        <div class="windowBody"> 
+            <div class="profileHolder">
+                <img src="/img/userPictures/profile_1.png" class="w-userI" width="80px" height="80px">
+                <div class="usernameWrap">
+                    <div class="username"> Akamine </div>
+                    <div class="subUsername"> [の 秋] </div>
+                    <div class="userBadges"> 
+                        <div class="badge material-icons" data-name="Verified"> check_circle </div> 
+                        <div class="badge material-icons" data-name="Developer"> construction </div> 
+                        <div class="badge material-icons" data-name="Friends"> group </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="statsContainer">
+                <div class="statItem"> Level: 
+                    <div class="value"> 0 (138/200) </div>
+                </div>
+                <div class="statItem statLevel"> </div>
+                <div class="statItem"> DX: 
+                    <div class="value"> 0 </div>
+                </div>
+                <div class="statItem"> PP: 
+                    <div class="value"> 0 </div>
+                </div>
+                <div class="statItem"> Wins: 
+                    <div class="value"> 0 </div>
+                </div>
+                <div class="statItem"> Losses: 
+                    <div class="value"> 0 </div>
+                </div>
+                <div class="statItem"> WL: 
+                    <div class="value"> N/A </div>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+
+    <div id="settings">
+        <div class="setClose material-icons" onclick="toggleSettings()"> close </div>
+        <div class="stng-hd"> Game </div>
+            <div class="stng-flex">
+                <div class="stng-opt"> Ping Display </div>
+                <div class="stng-ckbx"> 
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+             </div>
+            </div> 
+
+            <div class="stng-flex">
+                <div class="stng-opt"> FPS Display </div>
+                <div class="stng-ckbx"> 
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+             </div>
+            </div> 
+
+            <div class="stng-flex stng-end">
+                <div class="stng-opt"> Max Frames </div>
+                <div class="stng-ckbx"> 
+                    <select id="dropdown" name="Frame Values">
+                    <option value="60">60 FPS</option>
+                    <option value="120">120 FPS</option>
+                    <option value="144">144 FPS</option>
+                    <option value="170">170 FPS</option>
+                    <option value="244">244 FPS</option>
+                    </select>
+             </div>
+            </div> 
+
+        <div class="stng-hd"> Display </div>
+            <div class="stng-flex">
+                <div class="stng-opt"> Opponent Score </div>
+                <div class="stng-ckbx"> 
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+             </div>
+            </div> 
+
+            <div class="stng-flex">
+                <div class="stng-opt"> Middle Scroll </div>
+                <div class="stng-ckbx"> 
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+             </div>
+            </div> 
+
+            <div class="stng-flex">
+                <div class="stng-opt"> Colors </div>
+                
+                <div class="colors">
+                    <input class="stng-color ide-001" type="color">
+                    <input class="stng-color ide-002" type="color">
+                </div>
+            </div> 
+
+
+    <div id="aww"> 
+        with love from decode 
+        <span class="material-icons heart"> favorite </span>
+    </div>
+
+</body>
+
+<script> 
+    var menuWindow = document.getElementById("profWindow");
+    var battleWindow = document.getElementById("strtWindow");
+    var menuTitle = document.querySelector(".windowTitle");
+    var windBody = document.querySelector(".windowBody");
+    var setMenu = document.getElementById("settings");
+    var bgMusic = document.getElementById("bgMusic");
+
+    var volume = 0.2;
+</script>
