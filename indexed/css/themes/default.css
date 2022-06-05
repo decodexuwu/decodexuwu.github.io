@@ -1,0 +1,18 @@
+:root {
+    --background: #292f32;
+    --text: #fff;
+    --hd-bdr: #ffffff5e;
+    --loader-bg: black;
+    --loader-bdr: linear-gradient(45deg, black, white, black);;
+    --icon-pri: #fff;
+    --icon-bdr-pri: #fff;
+    --navBar: #0000008f;
+    --navItem: #000;
+    --navHover: #ffffff40;
+    --tooltip: #00000065;
+    --accent: #00ffff;
+    --active-pri: #59a6bd;
+    --active-bg: #2a8081;
+    --section: #00000033;
+    --menu-window: #003948;
+}

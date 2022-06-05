@@ -1,0 +1,24 @@
+.message {
+    display: flex;
+    top: 14px;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    margin: 8px;
+    background: #00000054;
+    border-radius: 8px;
+}
+
+.construction-icon {
+    margin-right: 8px;
+    animation: construction 1s infinite alternate;
+}
+
+@keyframes construction {
+    from {
+        color: rgb(255, 119, 0)
+    }
+    to {
+        color: rgb(255, 60, 0)
+    }
+}

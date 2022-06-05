@@ -18,6 +18,13 @@
 
 <body onload="getIconVar()">
 
+    <div id="loader">
+        <div id="holder">
+            <img id="gd-icon">
+        </div>
+        <div class="refresh-icon material-icons" onclick="closeLoader()"> rotate_right </div>
+    </div>
+
     <div id="tooltip"> Projects </div>
 
     <nav id="navBar">
@@ -30,7 +37,7 @@
         <a class="navItem" href="/about.html" oonmouseover='toolText("About")'>
             <div class="navIcon material-icons"> info </div>
         </a>
-        <a class="navItem" href="/construction.html" onmouseover='toolText("App Library")'>
+        <a class="navItem" onmouseover='toolText("App Library")'>
             <div class="navIcon material-icons"> add </div>
         </a>
         <div class="navItem">
